@@ -1,0 +1,517 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+html{
+    scroll-behavior: smooth;
+    font-size:62.5%;
+}
+body{
+    overflow-x: hidden;
+    width: 100%;
+}
+.header{
+    display: flex;
+    width: 100% ;
+    top:0;
+    left: 0;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    padding:1rem 4rem;
+    z-index: 1000;
+    
+}    
+
+.header ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.header li{
+        margin-right: 3rem;
+        border: 1px solid red;
+}      
+.header a{
+    color:rgb(117, 5, 10);
+    text-shadow: .1rem .05rem .3rem rgb(0,0,0);
+    font-size: 2.5rem;
+    text-decoration: none;
+} 
+.header a:hover{
+    color:#fff;
+}
+.fa-hamburger{
+    font-size: 5rem;
+    cursor: pointer;
+    z-index: 1000;
+    color:rgb(110, 5, 10);
+    display: none;
+}
+.logo{
+    float: right;
+}
+.logo img{
+    height:5rem;
+    width:5rem;
+}
+.fa-times{
+    transform: skew(180deg) rotate(-180deg);
+}
+/* responsive for header */
+@media(max-width:600px){
+        .fa-hamburger{
+            display: block;
+        }
+        nav{
+          position: fixed;
+          top: 0;left:-150%;
+          height: 100vh;
+          width:38rem;
+          background:black;
+        }
+        .header ul{
+            flex-flow: column;
+            justify-content: center;
+            height: 100%;
+        }
+        .header li{
+            margin:4rem 5em;
+        }
+        .header a{
+            font-size:4rem;
+            border-radius:5rem;
+            
+        }
+        .header a:hover{
+            padding:3rem 6rem;
+            color:white;
+            background:rgb(117, 5, 10);
+        }
+        .nav-time{
+            left:0%;
+        }
+    }
+
+
+
+/* home */
+
+
+#home{
+    background: linear-gradient(0deg,rgba(58,59,60,0.6),rgba(58,59,60,0.6));
+    position: relative;
+    bottom: 0rem;
+}
+#home .content h1{
+    font-size: 5rem;
+    font-weight:bolder;
+    color:rgb(117, 5, 10);
+    text-shadow: .1rem .1rem .3rem #333;
+    font-family: 'Train One', cursive;
+}
+#home .content h2{
+    font-size: 3.5rem;
+    font-weight: bolder;
+    color:#fff;
+    margin:1rem 0;
+    text-shadow: .1rem .1rem .3rem #333;
+    font-family: 'Lobster', cursive;
+
+}
+#home .content p{
+    font-size: 1.6rem;
+    color:#fff; 
+    font-family: 'Lobster', cursive;
+}
+#home .content button{
+   outline:none;
+   border: none;
+   border-radius: 5rem;
+   color:rgb(231, 163, 163);
+   background:rgb(46, 48, 47,0.8);
+   font-size: 1.6rem;
+   text-transform: capitalize;
+   position:relative;
+   z-index:1;
+   overflow:hidden;
+   cursor: pointer;
+   letter-spacing: .2rem;
+   padding: .5rem;
+}
+#home .content button::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    background:rgb(117, 5, 10);
+    transition:.4s;
+    z-index: -1 ;
+    height: 100%;
+    width: 0%;
+}
+#home .content button:hover::before{
+    width: 100%;
+}
+#home .content button:hover{
+    color:white;
+}
+#home .video-container{
+    position: absolute;
+    top: 0;left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index:-1;
+}
+.video-container .vid{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute; 
+    display:none;
+}
+.video-container  .vid1{
+    display:block;
+}
+#home .controls {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+  }
+#home .controls .dots{
+    height: 1rem;
+    width: 1rem;
+    cursor: pointer;
+    background: rgb(117, 5, 10);
+    margin: 0 1rem;
+}
+#home .controls .dots:hover{
+    background: #fff;
+}
+
+
+
+/* Special */
+
+#special{
+    top: 0;
+    background: #000;
+    min-height: 100vh;
+}
+#special .heading h1{
+    padding:3.7rem 1rem 0rem;
+    font-size:4rem;
+}
+#special .heading span{
+    color:rgb(110, 5, 10);   
+}
+.card-container{
+    width: 95%;
+    margin:7rem 7rem 0rem  auto;
+    display:flex;
+    justify-content: space-around;
+    flex-wrap:wrap; 
+}
+.card{
+    height:40rem;
+    width: 30rem;
+    background:#fff;
+    padding:1rem;
+    margin:2rem 2rem 4rem;
+    text-align:center;
+}
+.card img{
+    height: 28rem;
+}
+.card .btn{
+    color: white;
+    border-radius: 5rem;
+    background: seagreen;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    outline: none;
+    border: none;
+}
+.card .btn::before{
+    content: '';
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: #000;
+    transition: 0.2s;;
+    z-index: -1;
+}
+.card .btn:hover::before{
+    width: 100%;
+}
+.card:hover{
+    transform: scale(.8);
+}
+
+
+/* About-Us */
+
+#about-us{
+margin-top: 0;
+background: rgb(247, 238, 237);
+}
+#about-us h1, #contact h1{
+    padding: 3rem 0rem 0rem;
+    font-size: 4rem;
+    text-shadow: .1rem .1rem .4rem #333;
+}
+#about-us span, #contact span{
+    color:rgb(110, 5, 10); 
+}
+#about-us p{
+    font-size: 1.7rem;
+    font-family: 'Josefin Sans', sans-serif;
+    letter-spacing: .1rem;
+    margin: 1rem 0rem 0rem;
+    text-justify: newspaper;
+}
+#about-us img{
+    padding-top:3rem;
+    width: 75%;
+    height: 45rem;
+    object-fit: fill;
+    margin: auto;
+}
+.button{
+    text-align: center;
+}
+.btn button{
+    color: white;
+    border-radius: 5rem;
+    background:rgb(231, 163, 163);
+    color: #000;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    outline: none;
+    border: none;
+    padding:0.8rem;
+    margin-top: 2rem;
+    font-size:1.4rem;
+    font-weight: 500;
+
+}
+.btn button::before{
+content:'';
+position:absolute;
+top:0;
+left:0;
+background:rgb(117, 5, 10);
+transition:.1s;
+z-index: -1 ;
+height: 100%;
+width: 0%;
+}
+
+.btn button:hover::before{
+width: 100%;
+}
+.btn button:hover{
+    color:white;
+}
+
+
+/* dishes */
+
+#dish{
+    background:rgb(80, 102, 119);
+    min-height: 100vh;
+}
+#dish .heading h1{
+    padding:2rem 1rem 0rem;
+    font-size:4rem;
+}
+#dish .heading span{
+    color:rgb(110, 5, 10);   
+}
+.box-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+.box-container .card{
+    height:22rem;
+    width: 30rem;
+    border-radius:.7rem;
+    margin:3rem;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 2rem rgb(187, 180, 180);
+}
+.box-container .card img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+.box-container .box{
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(117, 115, 153, 0.5);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  transform: scale(0);
+}
+.box .card-title{
+    font-size: 3rem;
+}
+.box .card-text{
+    font-size: 1.5rem;
+    color: #fff;
+    border-top:.2rem dotted red;
+}
+.box .btn{
+    width:24rem;
+    font-size: 1.8rem;
+    border-radius: 5rem;
+    background: white;
+    color: black;
+}
+.box .btn:hover::before{
+    background: rgb(243, 169, 169);
+}
+.box-container .card:hover{
+    transform: scale(1);
+}
+.box-container .card:hover .box{
+    transform: scale(1);
+}
+
+/* contact */
+
+#contact{
+    background: rgb(224, 144, 135)
+}
+#contact h1{
+    color:#fff;
+}
+#contact form{
+    background:url(pic1/7.jpg) no-repeat;
+    background-size:cover;
+    background-position: center;
+    border-radius: 1rem;
+    margin:5rem 2rem;
+    box-shadow: 0 0 2rem #333;
+    padding-top: 2rem;
+}
+#contact form .inputbox{
+    position: relative;
+    text-align: center;
+}
+#contact form .inputbox input, #contact form .inputbox textarea{
+    outline:none;
+    border:.3rem solid rgb(235, 224, 224);
+    border-radius: 2rem;
+    margin:2rem 0;
+    padding: 0 1rem;
+    background: none;
+    height: 4rem;
+    width: 80%;
+    font-size: 2rem;
+}
+#contact form .inputbox h3{
+    position: absolute;
+    top: 3rem;
+    left: 12%;
+    color: #fff;
+    font-size: 1rem;
+}
+#contact form .inputbox input:focus ~ h3,
+#contact form .inputbox input:valid ~ h3,
+#contact form .inputbox textarea:focus ~ h3,
+#contact form .inputbox textarea:valid ~ h3{
+    font-size: 1.8rem;
+    left: 8%;
+    top: -.5rem;
+    color:aqua;
+}
+
+#contact form .inputbox textarea{
+    height:20rem;
+    resize: none;
+}
+#contact form .button1{
+    text-align: center;
+}
+#contact form input[type="submit"] {
+    outline: none;
+    border: none;
+    border-radius: 5rem;
+    color: #333;
+    font-size: 1.6rem;
+    font-weight: bold; 
+    letter-spacing: .2rem;
+    cursor: pointer;
+    overflow: hidden;
+    height: 4rem;
+    width: 12rem;
+    background: rgb(110, 5, 10);
+    color: #fff;
+    margin: 2rem;
+}
+#contact .button1 :hover{
+    color:black;
+}
+
+/* footer */
+
+#footer{
+    background: #000;
+}
+#footer .logo{
+    float: left;
+}
+#footer h1{
+    color:white;
+    font-size: 1.4rem;
+}
+#footer .icon{
+    text-align: center;
+}
+#footer .icon ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+#footer .icon li{
+    margin: 2rem 1rem;
+}
+.icon i{
+    font-size: 2rem;
+    color:white;
+}
+  .ico1:hover i{
+    background-color:red;
+  }
+  .ico2:hover i{
+    background-color: rgb(	66, 103 ,178);
+  }
+  .ico3:hover i{
+    background-color: #EA4335;
+  }
+  .ico4:hover i{
+    background-color: rgb(0,172,238);
+  }
