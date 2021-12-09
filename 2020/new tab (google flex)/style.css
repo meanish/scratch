@@ -1,0 +1,110 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    width: 1518px;
+    box-sizing:border-box;
+    font-family: OCR A Std, monospace;
+    background-color: rgb(40, 40, 42);
+}
+.gridd{ 
+    margin-left:30%;
+    margin-top: 10%;
+    display:grid;
+    grid-template-columns: repeat(7,100px);
+    grid-template-rows: 110px 30px 60px 30px 250px;
+    grid-template-areas: 
+            "m m m m m m m"
+            ". . . . . . ."
+            "h h h h h h h"
+            ". . . . . . ."
+            "a a a a a a a"
+            "a a a a a a a";
+}
+.googlee{
+    background-color:white;
+    grid-area: m;
+}
+.search{
+    grid-area: h;
+}
+.box{
+    grid-area:a;
+    text-align: center;
+    list-style: none;
+}
+.googlee .head{
+    text-align: center;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    margin-top:0px;
+    background-color:rgb(40, 40, 42) ;
+    height:110px;
+}
+.head h1{
+    color: white;
+    padding-top:0px;
+    font-size:90px;
+    cursor: pointer;
+}
+.view{
+    width: 100%;
+    margin-top: 8px;
+}
+.view form{
+    box-sizing: border-box;
+}
+.view input{
+    width:75%;
+    border-radius:35px;
+    font-size: 15px;
+    height:45px;
+    padding-left:60px;
+    margin-left: 55px;
+    outline:none;
+}
+.view button[type=submit]{
+    position: absolute;
+    float: left;
+    cursor: pointer;
+    padding: 10px;
+    outline: none;
+    border-radius:35px;
+    margin:5px 58px;
+    width:50px;
+    background-color: white;
+    border: none;
+    line-height: 15px;
+}   
+.box{
+    position: relative;
+}
+
+.box i{
+    margin: 13px 0px 0px 5px;
+    background-color: rgb(97, 143, 91);
+    padding: 13px;
+    width:30px;
+    border-radius: 50%;
+}
+.box li{
+    color: white;
+    font-size: 13px;
+    padding: 10px;
+}
+.box .sub {
+    margin:7px 7px 10px 3px;
+    width:18.5%;
+    height:100px;
+}
+.box .sub{
+    float: left;
+}
+.subboxe5, .subboxe10{
+    float:left;
+    margin-left:-2px;
+}
+.sub:hover {
+    background-color: rgb(48, 46, 39);
+    border-radius:10px;
+}
