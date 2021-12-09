@@ -1,0 +1,169 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    width: 100%;
+    box-sizing:border-box;
+    font-family: OCR A Std, monospace;
+    background-color: rgb(25, 26, 28);
+}
+menu{
+}
+.menu1{
+    width:100%;
+    height:50px;
+    background-color: #303030;
+    color:white;
+    overflow:hidden;
+}
+.menu1 .col1, .col2{
+    float: left;
+    margin:4px 0px;
+    text-align: center;
+    display: inline;
+}
+.menu1 .col1{
+    width:40%;
+}
+.col1 .nav{
+    float:left;
+    width:30%;
+    list-style: none;
+}
+.nav i{
+    padding:10px;
+    border-radius: 90%; 
+    margin-top: 4px;  
+}
+.col1 h1{
+    width:65%;
+    float:left;
+    padding: 2px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.col1 .nav li i:hover{
+    color:rgb(124, 149, 204);
+}
+.col1 .nav li i:active{
+    background-color: rgb(66, 64, 57);
+}
+.side-bar{
+    display:none;
+}
+.col1 .nav li:hover .side-bar{
+    position: absolute;
+    display: block;
+    background-color: #303030;
+    margin-top: 0px;
+    width:250px;
+    text-align: start;
+    padding:1px;
+    
+}
+.col1 .nav li:hover .side-bar ul{
+    list-style: none;
+}
+.col1 .nav li:hover .side-bar  ul li{
+    width:80%;
+    height:20px;
+    float:right;
+    padding:10px 0px 6px 10px;
+    color:white;
+}
+.col1 .nav li:hover .side-bar i{
+    margin-top: 0px;
+    border:none;
+    border-radius: 0%;
+    width:06%;
+    height:16px;
+    float: left;
+    color:rgb(103, 107, 112);   
+}
+.col1 .nav li:hover .side-bar  ul li:hover{
+    background-color: rgb(83, 88, 99);
+    color:rgb(156, 144, 103);
+}
+.menu1 .col2{
+    width:25%;
+    padding-left: 08px;
+}
+.menu1 .col2 li{
+    padding:10px 20px;
+    list-style: none;
+    float: left;
+}
+.menu1 .col2 ul li i{
+    border-radius: 50%;
+    padding:03px;
+}
+.col2 li:hover{
+    color:rgb(156, 144, 103);
+    cursor: pointer;
+}
+.col2 li:active i{
+    background-color: black;
+    color:white;
+}
+.drop{
+    display: none;
+}
+.col2 li:hover .drop{
+    display:block;
+    position:absolute;
+    margin-left:-50px;
+    margin-top: 2px;  
+}
+.col2 li:hover .drop ul{
+    color:;
+    width:150px;
+    box-shadow:0px 1px 2px rgba(102,102,104,0.6);
+}
+.col2 li:hover .drop li{
+    background-color: #303030;
+    float: none;
+    padding-left:20px;
+    text-align: start;
+}   
+.col2 li:hover .drop li:hover{
+    background-color: rgb(6, 15, 36);
+    color:rgb(156, 104, 103);
+} 
+.menu1 .col3{
+    float: left;
+    margin:4px 0px;
+    text-align: center;
+    display: inline;
+
+}
+.col3 form{
+    box-sizing: border-box;
+    margin: 0px 80px;
+}
+.col3 input[type=text]{
+    float: left;
+    display: block;
+    padding:11px;
+    border-radius:20px;
+    background-color: honeydew;
+    font-size:13px;
+    outline:none;
+    border:2px solid black;
+}
+.col3 button{
+    position: absolute;
+    border-radius:20px;
+    border: none;
+    float: left;
+    width:50px;
+    padding:10px;
+    margin-top: 2px;
+    margin-left: -52px;
+    cursor: pointer;
+    background-color: honeydew;
+    outline: none;
+}   
+.col3 button:active{
+    background-color: rgb(83, 88, 99);
+    color:red;
+}
